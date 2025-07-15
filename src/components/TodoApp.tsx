@@ -22,15 +22,15 @@ export const TodoApp = () => {
   return (
     <div>
       <h1>Lista de tareas</h1>
-      <div>
+      <div className='flex'>
         <input
-          type=""
+          type="text"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
           placeholder='Nueva tarea'
 
         />
-        <button onClick={handleTask}>Add</button>
+        <button onClick={handleTask} className='btn'>Add</button>
       </div>
       <TaskList taskList={taskList} deleteTask={handleDeleteTask} ></TaskList>
 
